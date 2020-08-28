@@ -1,3 +1,6 @@
+# Runtime: 28 ms, faster than 94.97% of Python3 online submissions
+# Memory Usage: 13.8 MB, less than 87.63% of Python3 online submissions
+
 # If list is empty return ""
 # Initialise i = 1, and s = ""
 # Let m be the length of the shortest strin
