@@ -1,16 +1,13 @@
 class Solution {
-    public int removeElement(int[] nums, int val) {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length == 0) return 0;
         int i = 0;
-        int n = nums.length;
-        while (i < n) {
-            if (nums[i] == val) {
-                nums[i] = nums[n - 1];
-                // reduce array size by one
-                n--;
-            } else {
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[j] != nums[i]) {
                 i++;
+                nums[i] = nums[j];
             }
         }
-        return n;
+        return i + 1;
     }
 }
