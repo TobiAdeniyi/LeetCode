@@ -1,19 +1,13 @@
+# Runtime: 56 ms, faster than 15.65% of Python3 online submissions for Remove Element.
+# Memory Usage: 13.9 MB, less than 46.52% of Python3 online submissions for Remove Element.
+
 class Solution:
-    def reverse(self, x):
-        str_x = str(x)
-        if x<0:
-            str_x = '-'+str_x[::-1][:-1]
-            x = int(str_x)
-            val = x & -0x80000000
-            if(val==-0x80000000):
-                return x
-            else:
-                return 0
-        else:
-            str_x = str_x[::-1]
-            x = int(str_x)
-            val = x & 0x7fffffff
-            if(val==x):
-                return x
-            else:
-                return 0
+    def removeElement(self, nums, val):
+        j = 0
+        i = 0
+        while i < len(nums):
+            if nums[i] != val:
+                nums[j] = nums[i]
+                j += 1
+            i += 1
+        return j
