@@ -1,4 +1,6 @@
-public class Solution {
+package CountAndSay;
+
+public class CountAndSay {
     public String countAndSay(int n) {
 	    	StringBuilder curr=new StringBuilder("1");
 	    	StringBuilder prev;
